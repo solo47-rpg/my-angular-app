@@ -13,4 +13,10 @@ export class App implements OnInit {
   ngOnInit(): void {
     this.title.set(`${this.title().toUpperCase()} ${new Date()}`)
   }
+
+  askName(){
+    const name = window.prompt("Enter your name") as string;
+    this.title.set(name);
+  }
+
 }
